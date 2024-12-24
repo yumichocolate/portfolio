@@ -75,7 +75,7 @@ img {
 	top: 0;
 	z-index: 1;
 	width: 100%;
-	background-color: #fff;
+	background-color: #adadff;
 	box-shadow: 0 5px 10px -6px rgba(0, 0, 0, 0.1);
 }
 
@@ -95,7 +95,7 @@ img {
 }
 
 .header-logo a {
-	color: #333;
+	color: #3297a8;
 }
 
 .gnav-list {
@@ -116,7 +116,7 @@ img {
 	padding: 5px 0;
 	transition: 0.3s;
 	letter-spacing: 0.05em;
-	color: #333;
+	color: #3297a8;
 }
 .gnav-item a:after {
 	position: absolute;
@@ -128,7 +128,7 @@ img {
 	transition: 0.3s;
 	-webkit-transform: translateX(-50%);
 	transform: translateX(-50%);
-	background-color: #333;
+	background-color: #3297a8;
 }
 
 .gnav-item a:hover:after {
@@ -138,8 +138,12 @@ img {
 /*--------------------------------
  メインビジュアル
 ---------------------------------*/
+.content {
+	background-color: wheat;
+}
 .mv {
 	display: flex;
+	position: relative;
 	align-items: center;
 	justify-content: center;
 	height: auto;
@@ -153,7 +157,108 @@ img {
 
 .mv-container img {
 	width: 100%;
-	height: auto;
+	height: 647px;
+}
+/*-----------------------------------
+sakura_block
+-----------------------------------*/
+#sakura_block {
+	width: 100%;
+}
+#sakura_block .sakura_parts_box {
+	position: relative;
+}
+#sakura_block .sakura_parts_box img {
+	position: absolute;
+}
+#sakura_block .sakura_parts_box img:nth-child(2n + 1) {
+	width: 13px; /*花びらのサイズ*/
+}
+#sakura_block .sakura_parts_box img:nth-child(2n) {
+	width: 15px; /*花びらのサイズ*/
+}
+
+/*-----------------------------------
+舞い散るアニメーション
+回転しつつ上から下へ
+-----------------------------------*/
+@keyframes sakura {
+	0% {
+		opacity: 0;
+	}
+	20% {
+		transform: translate(3px, 30px) rotate(20deg);
+		opacity: 1;
+	}
+	30% {
+		transform: translate(0, 50px) rotate(50deg);
+	}
+	50% {
+		transform: translate(-20px, 100px) rotate(150deg);
+	}
+	70% {
+		transform: translate(-40px, 150px) rotate(-50deg);
+		opacity: 0.8;
+	}
+	90% {
+		transform: translate(-60px, 200px) rotate(-180deg);
+	}
+	100% {
+		transform: translate(-70px, 230px);
+		opacity: 0;
+	}
+}
+
+.sakura_parts_box img {
+	animation: sakura linear 6s infinite;
+	/*アニメーションが始まるまで画像を見えなくしておく*/
+	opacity: 0;
+}
+
+/*-----------------------------------
+アニメーションが始まるまでの時間
+-----------------------------------*/
+img.parts_01,
+img.parts_04,
+img.parts_07,
+img.parts_10,
+img.parts_08,
+img.parts_11,
+img.parts_13,
+img.parts_16,
+img.parts_19 {
+	-webkit-animation-delay: 0s;
+	animation-delay: 0s;
+}
+img.parts_02,
+img.parts_05 {
+	-webkit-animation-delay: 1.5s;
+	animation-delay: 1.5s;
+}
+img.parts_03,
+img.parts_06,
+img.parts_09,
+img.parts_12 {
+	-webkit-animation-delay: 4s;
+	animation-delay: 4s;
+}
+img.parts_08,
+img.parts_11,
+img.parts_13,
+img.parts_16,
+img.parts_19 {
+	-webkit-animation-delay: 0.5s;
+	animation-delay: 0.5s;
+}
+img.parts_14,
+img.parts_17 {
+	-webkit-animation-delay: 2s;
+	animation-delay: 2s;
+}
+img.parts_15,
+img.parts_18 {
+	-webkit-animation-delay: 5s;
+	animation-delay: 5s;
 }
 
 /*--------------------------------
@@ -269,11 +374,6 @@ img {
 	text-align: center;
 }
 
-.contact-list {
-	display: flex; /*横並びにする*/
-	justify-content: center; /*中央の位置をここにもってくる*/
-}
-
 .contact-item:not(:last-child) {
 	margin-right: 10px;
 }
@@ -281,13 +381,6 @@ img {
 .contact-text {
 	margin-top: 10px;
 }
-
-.sns-logo {
-	width: 70px;
-	height: 70px;
-	display: block;
-}
-
 /*--------------------------------
  ページトップ
 ---------------------------------*/
@@ -442,8 +535,28 @@ img {
 	}
 
 	/*  メインビジュアル */
+
+	/*-----------------------------------
+sakura_block
+-----------------------------------*/
+	#sakura_block {
+		width: 100%;
+	}
+	#sakura_block .sakura_parts_box {
+		position: relative;
+	}
+	#sakura_block .sakura_parts_box img {
+		position: absolute;
+	}
+	#sakura_block .sakura_parts_box img:nth-child(2n + 1) {
+		width: 13px; /*花びらのサイズ*/
+	}
+	#sakura_block .sakura_parts_box img:nth-child(2n) {
+		width: 15px; /*花びらのサイズ*/
+	}
+
 	.mv {
-		height: 40vh;
+		height: 20vh;
 	}
 
 	.mv-container {
