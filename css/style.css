@@ -58,7 +58,10 @@ img {
 	margin-bottom: 40px;
 	text-align: center;
 	letter-spacing: 0.05em;
-	color: #333;
+	color: #b76ddc;	
+	font-family: "Arial", "Meiryo", serif;	
+	font-style: italic;	
+	}
 }
 
 .lead {
@@ -101,6 +104,7 @@ img {
 .gnav-list {
 	display: flex;
 	justify-content: space-between;
+	text-align: right;
 	list-style: none;
 }
 
@@ -135,30 +139,43 @@ img {
 	width: 100%;
 }
 
-/*--------------------------------
- メインビジュアル
----------------------------------*/
-.content {
-	background-color: wheat;
-}
-.mv {
-	display: flex;
-	position: relative;
-	align-items: center;
-	justify-content: center;
-	height: auto;
-	text-align: center;
-}
+#nav-sp {	
+	display: none;	
+	}	
+	#nav-sp {	
+	display: block;	
+	}	
+	#menu-sp {	
+	max-width: 5%;	
+	height: auto;	
+	vertical-align: bottom;	
+	border-style: none;	
+	}	
+	img {	
+	}	
+	/*--------------------------------	
+	メインビジュアル	
+	---------------------------------*/	
+	.content {	
+	background-color: #fee3d7;	
+	}	
+	.mv {	
+	display: flex;	
+	position: relative;	
+	align-items: center;	
+	justify-content: center;	
+	height: auto;	
+	text-align: center;	
+	}	
+	.mv-container {	
+	position: relative;	
+	padding: 0 20px;	
+	}	
+	.mv-container-imag {	
+	width: 100%;	
+	height: 647px;	
+	}
 
-.mv-container {
-	position: relative;
-	padding: 0 20px;
-}
-
-.mv-container img {
-	width: 100%;
-	height: 647px;
-}
 /*-----------------------------------
 sakura_block
 -----------------------------------*/
@@ -179,32 +196,113 @@ sakura_block
 }
 
 /*-----------------------------------
-舞い散るアニメーション
-回転しつつ上から下へ
------------------------------------*/
+  桜の花びらパーツの表示位置
+  -----------------------------------*/
+img.parts_01 {
+	top: 0;
+	left: 5%;
+}
+img.parts_02 {
+	top: 0;
+	left: 12%;
+}
+img.parts_03 {
+	top: 0;
+	left: 15%;
+}
+img.parts_04 {
+	top: 0;
+	left: 22%;
+}
+img.parts_05 {
+	top: 0;
+	left: 25%;
+}
+img.parts_06 {
+	top: 0;
+	left: 28%;
+}
+img.parts_07 {
+	top: 0;
+	left: 35%;
+}
+img.parts_08 {
+	top: 0;
+	left: 40%;
+}
+img.parts_09 {
+	top: 0;
+	left: 43%;
+}
+img.parts_10 {
+	top: 0;
+	left: 50%;
+}
+img.parts_11 {
+	top: 0;
+	left: 55%;
+}
+img.parts_12 {
+	top: 0;
+	left: 60%;
+}
+img.parts_13 {
+	top: 0;
+	left: 63%;
+}
+img.parts_14 {
+	top: 0;
+	left: 70%;
+}
+img.parts_15 {
+	top: 0;
+	left: 75%;
+}
+img.parts_16 {
+	top: 0;
+	left: 81%;
+}
+img.parts_17 {
+	top: 0;
+	left: 85%;
+}
+img.parts_18 {
+	top: 0;
+	left: 90%;
+}
+img.parts_19 {
+	top: 0;
+	left: 93%;
+}
+
+/*-----------------------------------
+  舞い散るアニメーション
+  回転しつつ上から下へ
+  -----------------------------------*/
 @keyframes sakura {
 	0% {
 		opacity: 0;
 	}
+
 	20% {
-		transform: translate(3px, 30px) rotate(20deg);
+		transform: translate(3px, 200px) rotate(20deg);
 		opacity: 1;
 	}
 	30% {
-		transform: translate(0, 50px) rotate(50deg);
+		transform: translate(0, 340px) rotate(50deg);
 	}
 	50% {
-		transform: translate(-20px, 100px) rotate(150deg);
+		transform: translate(-20px, 420px) rotate(150deg);
 	}
 	70% {
-		transform: translate(-40px, 150px) rotate(-50deg);
+		transform: translate(-40px, 580px) rotate(-50deg);
 		opacity: 0.8;
 	}
 	90% {
-		transform: translate(-60px, 200px) rotate(-180deg);
+		transform: translate(-60px, 650px) rotate(-180deg);
 	}
 	100% {
-		transform: translate(-70px, 230px);
+		transform: translate(-70px, 730px);
 		opacity: 0;
 	}
 }
@@ -216,8 +314,8 @@ sakura_block
 }
 
 /*-----------------------------------
-アニメーションが始まるまでの時間
------------------------------------*/
+  アニメーションが始まるまでの時間
+  -----------------------------------*/
 img.parts_01,
 img.parts_04,
 img.parts_07,
@@ -261,6 +359,8 @@ img.parts_18 {
 	animation-delay: 5s;
 }
 
+Resources
+
 /*--------------------------------
  Works
 ---------------------------------*/
@@ -289,6 +389,10 @@ img.parts_18 {
 	border: 1px solid #e6e6e6;
 }
 
+.works-img img:hover {	
+	border: 3px solid #cfdb00;	
+	}
+
 .works-name {
 	font-size: 12px;
 	font-weight: bold;
@@ -303,10 +407,15 @@ img.parts_18 {
 /*--------------------------------
  Skill
 ---------------------------------*/
+
+#skill{
+	background-color: #fee3d7;
+}
 .skill-list {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
+	text-align: center;
 	margin-bottom: -50px;
 }
 
@@ -314,6 +423,7 @@ img.parts_18 {
 	display: flex;
 	align-items: flex-start;
 	justify-content: space-between;
+	text-align: center;
 	width: 48%;
 	margin-bottom: 50px;
 }
