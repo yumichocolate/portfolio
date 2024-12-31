@@ -58,10 +58,9 @@ img {
 	margin-bottom: 40px;
 	text-align: center;
 	letter-spacing: 0.05em;
-	color: #b76ddc;	
-	font-family: "Arial", "Meiryo", serif;	
-	font-style: italic;	
-	}
+	color: #b76ddc;
+	font-family: "Arial", "Meiryo", serif;
+	font-style: italic;
 }
 
 .lead {
@@ -139,42 +138,41 @@ img {
 	width: 100%;
 }
 
-#nav-sp {	
-	display: none;	
-	}	
-	#nav-sp {	
-	display: block;	
-	}	
-	#menu-sp {	
-	max-width: 5%;	
-	height: auto;	
-	vertical-align: bottom;	
-	border-style: none;	
-	}	
-	img {	
-	}	
-	/*--------------------------------	
+#nav-sp {
+	display: none;
+}
+#nav-sp {
+	display: block;
+}
+#menu-sp {
+	max-width: 5%;
+	height: auto;
+	vertical-align: bottom;
+	border-style: none;
+}
+
+/*--------------------------------	
 	メインビジュアル	
-	---------------------------------*/	
-	.content {	
-	background-color: #fee3d7;	
-	}	
-	.mv {	
-	display: flex;	
-	position: relative;	
-	align-items: center;	
-	justify-content: center;	
-	height: auto;	
-	text-align: center;	
-	}	
-	.mv-container {	
-	position: relative;	
-	padding: 0 20px;	
-	}	
-	.mv-container-imag {	
-	width: 100%;	
-	height: 647px;	
-	}
+	---------------------------------*/
+.content {
+	background-color: #fee3d7;
+}
+.mv {
+	display: flex;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+	height: auto;
+	text-align: center;
+}
+.mv-container {
+	position: relative;
+	padding: 0 20px;
+}
+.mv-container-imag {
+	width: 100%;
+	height: 647px;
+}
 
 /*-----------------------------------
 sakura_block
@@ -285,17 +283,17 @@ img.parts_19 {
 	}
 
 	20% {
-		transform: translate(3px, 200px) rotate(20deg);
+		transform: translate(15px, 50px) rotate(20deg);
 		opacity: 1;
 	}
 	30% {
-		transform: translate(0, 340px) rotate(50deg);
+		transform: translate(0, 110px) rotate(50deg);
 	}
 	50% {
-		transform: translate(-20px, 420px) rotate(150deg);
+		transform: translate(-20px, 300px) rotate(150deg);
 	}
 	70% {
-		transform: translate(-40px, 580px) rotate(-50deg);
+		transform: translate(-40px, 420px) rotate(-50deg);
 		opacity: 0.8;
 	}
 	90% {
@@ -364,10 +362,18 @@ Resources
 /*--------------------------------
  Works
 ---------------------------------*/
+
+.container {
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
 .works-list {
 	display: flex;
 	flex-wrap: wrap;
 	margin-bottom: -40px;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .works-item {
@@ -375,6 +381,7 @@ Resources
 	margin-right: 1.5873%;
 	margin-bottom: 40px;
 	color: #333;
+	text-align: center;
 }
 
 .works-item:hover {
@@ -387,11 +394,13 @@ Resources
 
 .works-img img {
 	border: 1px solid #e6e6e6;
+	margin-left: auto;
+	margin: 0 auto;
 }
 
-.works-img img:hover {	
-	border: 3px solid #cfdb00;	
-	}
+.works-img img:hover {
+	border: 3px solid #cfdb00;
+}
 
 .works-name {
 	font-size: 12px;
@@ -407,15 +416,19 @@ Resources
 /*--------------------------------
  Skill
 ---------------------------------*/
+.container {
+	text-align: center;
+}
 
-#skill{
+#skill {
 	background-color: #fee3d7;
 }
 .skill-list {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	text-align: center;
+	flex-wrap: wrap;
+	justify-content: center;
 	margin-bottom: -50px;
 }
 
