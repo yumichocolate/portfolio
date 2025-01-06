@@ -59,7 +59,7 @@ img {
 	text-align: center;
 	letter-spacing: 0.05em;
 	color: #b76ddc;
-	font-family: "Arial", "Meiryo", serif;
+	font-family: "Josefin Sans", serif;
 	font-style: italic;
 }
 
@@ -100,8 +100,7 @@ img {
 	color: #3297a8;
 }
 
-// <uniquifier>: Use a unique and descriptive class name
-.josefin-sans-<uniquifier > {
+.header {
 	font-family: "Josefin Sans", serif;
 	font-optical-sizing: auto;
 	font-weight: 400;
