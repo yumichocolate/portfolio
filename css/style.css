@@ -31,7 +31,7 @@ img {
  レイアウト
 ---------------------------------*/
 .wrapper {
-	padding-top: 73px;
+	padding-top: 55px;
 }
 
 .section {
@@ -161,9 +161,18 @@ img {
 /*--------------------------------	
 	メインビジュアル	
 	---------------------------------*/
-.content {
-	background-color: #fee3d7;
+.haikei {
+	position: relative;
+	background-image: url(../img/sakurahaikei.png);
+	height: auto;
+	width: 100%;
+	z-index: 12;
 }
+.content {
+	height: auto;
+	width: 100%;
+}
+
 .mv {
 	display: flex;
 	position: relative;
@@ -172,21 +181,32 @@ img {
 	height: auto;
 	text-align: center;
 }
+
 .mv-container {
 	position: relative;
 	padding: 0 20px;
 }
 .mv-container-imag {
+	position: relative;
 	width: 100%;
 	height: 647px;
 	margin-top: 20px;
+}
+
+h1.example1 {
+	color: #a14d75;
+}
+h2.example2 {
+	color: #a14d75;
 }
 
 /*-----------------------------------
 sakura_block
 -----------------------------------*/
 #sakura_block {
+	position: relative;
 	width: 100%;
+	z-index: 1;
 }
 #sakura_block .sakura_parts_box {
 	position: relative;
@@ -675,6 +695,12 @@ Resources
 	}
 
 	/*  メインビジュアル */
+	.mv {
+		height: 256px;
+		width: 100%;
+	}
+
+	.
 
 	/*-----------------------------------
 sakura_block
@@ -699,11 +725,23 @@ sakura_block
 		height: auto;
 	}
 	.mv {
+		position: relative;
 		height: 20vh;
+		top: 140px;
 	}
 
 	.mv-container {
+		position: relative;
+		height: 470px;
+		width: 100%;
 		padding: 0 40px;
+	}
+
+	.haikei {
+		position: relative;
+		top: 5px;
+		height: 450px;
+		width: 100%;
 	}
 
 	.mv-title {
@@ -719,10 +757,18 @@ sakura_block
 		font-size: 14px;
 		line-height: 1.7;
 	}
+	h1.example1 {
+		color: #a14d75;
+	}
+	h2.example2 {
+		color: #a14d75;
+	}
 
 	/* Works */
 
 	#works {
+		position: relative;
+		top: 130px;
 	}
 	.works-name {
 		font-size: 12px;
@@ -743,6 +789,11 @@ sakura_block
 	}
 
 	/* Skill */
+
+	#skill {
+		position: relative;
+		top: 120px;
+	}
 	.skill-list {
 		display: block;
 		margin-bottom: 0;
@@ -767,6 +818,11 @@ sakura_block
 	}
 
 	/* About */
+
+	#about {
+		position: relative;
+		top: 120px;
+	}
 	.profile {
 		display: block;
 	}
@@ -783,6 +839,13 @@ sakura_block
 
 	.profile-body p:not(:last-child) {
 		margin-bottom: 20px;
+	}
+
+	/*CONTACT*/
+	#contact {
+		position: relative;
+		top: 20px;
+		padding: 120px;
 	}
 
 	/* フッター */
